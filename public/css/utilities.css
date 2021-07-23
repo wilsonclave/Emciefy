@@ -1,0 +1,54 @@
+.btn {
+	color: #fff;
+	border: 1px solid #fb7afc;
+	background: #fb7afc;
+	border-radius: 5px;
+	padding: 10px 20px;
+	font-family: "Fjalla One";
+	opacity: 0.8;
+}
+
+.btn-2 {
+	color: #333;
+	border: 1px solid #fff;
+	background: #fff;
+	border-radius: 5px;
+	padding: 10px 20px;
+	font-family: "Fjalla One";
+	opacity: 0.8;
+}
+
+.section-divider {
+	display: inline-block;
+	border-top: 2px solid #fb7afc;
+	width: 76px;
+}
+
+.section-divider-2 {
+	display: inline-block;
+	border-top: 2px solid #fff;
+	width: 76px;
+}
+
+.btn:hover {
+	color: #fce2ce;
+}
+
+.text-primary {
+	color: #fff;
+}
+
+.text-secondary {
+	color: #333;
+}
+
+.flex-items {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 20px 300px 20px;
+}
+
+/* Delete me */
