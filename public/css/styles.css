@@ -47,9 +47,10 @@ img {
 	height: 70px;
 	position: fixed;
 	top: 0px;
-	opacity: 0.8;
+	opacity: 0.9;
 	padding: 30px 0;
-	z-index: 1;
+	z-index: 30;
+	transition: 0.3s;
 }
 
 #navbar .column {
@@ -84,11 +85,16 @@ ul {
 	overflow: hidden;
 }
 
+.navbar ul li:last-child {
+	visibility: hidden;
+}
+
 nav ul li {
-	padding: 0 30px;
+	padding: 0 10px;
 	border-right: 1px solid #fb7afc;
 }
 
+nav ul li:nth-child(6),
 nav ul li:last-child {
 	border: none;
 }
@@ -100,6 +106,47 @@ nav ul li a {
 
 nav ul li a:hover {
 	color: #fb7afc;
+}
+
+/* Side Nav */
+.side-nav {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	right: 0;
+	background-color: #111;
+	opacity: 0.9;
+	overflow-x: hidden;
+	transition: 0.5s;
+}
+
+.side-nav a {
+	padding: 30px 10px 10px 10px;
+	text-decoration: none;
+	font-size: 6px;
+	color: #ccc;
+	display: block;
+	transition: 0.3s;
+	text-transform: uppercase;
+}
+
+.side-nav a:hover {
+	color: #fff;
+}
+
+.side-nav .btn-close {
+	position: absolute;
+	top: 0;
+	right: 5px;
+	font-size: 36px;
+	margin-right: 0;
+}
+
+#main {
+	transition: margin-right 0.5;
+	width: 100%;
 }
 
 /* Header */
@@ -217,7 +264,7 @@ a:hover {
 }
 
 .book-writing-services * {
-	z-index: 10;
+	z-index: 1;
 }
 
 /*  Marketing */
@@ -468,7 +515,24 @@ form {
 /* Tablet */
 
 @media (max-width: 768px) {
-	.navbar {
+	#navbar {
+		height: 40px;
+	}
+
+	#navbar .logo a {
+		font-size: 30px;
+	}
+
+	#navbar .logo-description {
+		font-size: 10px;
+		margin-top: 14px;
+	}
+
+	.navbar ul a {
+		font-size: 10px;
+	}
+
+	.navbar ul li:last-child {
 		visibility: hidden;
 	}
 
@@ -510,7 +574,24 @@ form {
 
 @media (max-width: 414px) {
 	.navbar {
-		visibility: hidden;
+		height: 40px;
+	}
+
+	.logo a {
+		font-size: 30px;
+	}
+
+	.logo-description {
+		font-size: 10px;
+		margin-top: 14px;
+	}
+
+	.navbar ul li:nth-child(-n + 6) {
+		display: none;
+	}
+
+	.navbar ul li:last-child {
+		visibility: visible;
 	}
 
 	.hero,
@@ -581,8 +662,17 @@ form {
 /* Mobile 375 */
 
 @media (max-width: 375px), (max-width: 667) {
-	.navbar {
-		visibility: hidden;
+	#navbar {
+		height: 40px;
+	}
+
+	#navbar .logo a {
+		font-size: 30px;
+	}
+
+	#navbar .logo-description {
+		font-size: 10px;
+		margin-top: 14px;
 	}
 
 	.hero,
@@ -590,7 +680,7 @@ form {
 	.marketing,
 	.eats-excursions,
 	.about {
-		height: 80vh;
+		height: 100vh;
 	}
 
 	.hero .content .top-content {
@@ -656,6 +746,19 @@ form {
 
 /* 360 x 640 */
 @media (max-width: 360px) {
+	.navbar {
+		height: 40px;
+	}
+
+	.logo a {
+		font-size: 30px;
+	}
+
+	.logo-description {
+		font-size: 10px;
+		margin-top: 14px;
+	}
+
 	.hero,
 	.book-writing-services,
 	.marketing,

@@ -16,16 +16,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" referrerpolicy="no-referrer" />
 
     <!-- Favicon -->
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" type="image/x-icon" href="/public/images/favicon.ico">
     
     <!-- CSS -->
     <link rel="stylesheet" href="css/utilities.css">
     <link rel="stylesheet" href="css/styles.css">
     <title>Welcome to Emciefy | Proofreading | Marketing  </title>
 </head>
-<body id="home">
-    <header class="hero">
-
+<body id="main" >
+    <header id="home" class="hero">
         <!-- Navbar -->
         <div id="navbar" class="navbar">
             <div class="column">
@@ -42,9 +41,20 @@
                     <li><a href="#marketing">Marketing</a></li>
                     <li><a href="#eats-excursions-everything">Eats, Excursions, & Everything Else</a></li>
                     <li><a href="#contact">Contact</a></li>
-
+                    <li><span class="open-slide">
+                        <a href="#" onclick="openSlideMenu()"><i class="fas fa-bars fa-2x"></i></a>
+                    </span></li>
                 </ul>
             </nav>
+            <div id="side-menu" class="side-nav">
+                <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#book-writing-services">Book Writing Services</a>
+                <a href="#marketing">Marketing</a>
+                <a href="#eats-excursions-everything">Eats, Excursions, & Everything Else</a>
+                <a href="#contact">Contact</a>
+            </div>
         </div>
 
         <!-- Main Content -->
@@ -69,7 +79,6 @@
         </div>
     </header>
     <main>
-
         <!-- Book Writing Services -->
         <section id="book-writing-services" class="book-writing-services">
             <div class="flex-items text-primary">
@@ -187,5 +196,28 @@
         </div>
         <p>Emciefy 2021</p>
     </footer>
+    <script>
+        function openSlideMenu() {
+            document.getElementById('side-menu').style.width='55px'; 
+            document.getElementById('main').style.paddingRight='55px'; 
+        }
+        function closeSlideMenu() {
+            document.getElementById('side-menu').style.width='0';
+            document.getElementById('main').style.paddingRight='0';
+        }
+    </script>
+    <script>
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+          if (prevScrollpos > currentScrollPos) {
+            document.getElementById("navbar").style.top = "0";
+          } else {
+            document.getElementById("navbar").style.top = "-70px";
+          }
+          prevScrollpos = currentScrollPos;
+        }
+        </script>
+        
 </body>
 </html>
